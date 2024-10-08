@@ -308,44 +308,72 @@
 
     
 
-    <!-- Contact -->
-    <div id="contact" class="form-1 bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Contact details</h2>
-                    <p class="p-heading">For any type of online project please don't hesitate to get in touch with me. The fastest way is to send me your message using the following email <a class="blue no-line" href="#your-link">Waheebtemitope@gmail.com</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Contact Form -->
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Project details</label>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">Submit</button>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
+ <!-- Contact -->
+<div id="contact" class="form-1 bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Contact details</h2>
+                <p class="p-heading">For any type of online project please don't hesitate to get in touch with me. The fastest way is to send me your message using the following email <a class="blue no-line" href="#your-link">Waheebtemitope@gmail.com</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <!-- Contact Form -->
+                <form id="contactForm" action="https://formspree.io/f/xjkvblrb" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control-input" id="cname" name="name" required>
+                        <label class="label-control" for="cname">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control-input" id="cemail" name="email" required>
+                        <label class="label-control" for="cemail">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control-textarea" id="cmessage" name="message" required></textarea>
+                        <label class="label-control" for="cmessage">Project details</label>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control-submit-button">Submit</button>
+                    </div>
+                </form>
+                <!-- end of contact form -->
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->  
-    <!-- end of contact -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of form-1 -->  
+<!-- end of contact -->  
 
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting the default way
+
+        // Fetch form data
+        let formData = new FormData(this);
+
+        // Send form data to Formspree
+        fetch('https://formspree.io/f/xjkvblrb', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Thank you! Your message has been sent successfully.');
+                document.getElementById('contactForm').reset(); // Clear form fields
+            } else {
+                alert('Oops! There was a problem submitting your form.');
+            }
+        })
+        .catch(error => {
+            alert('Oops! Something went wrong.');
+        });
+    });
+</script>
 
     <!-- Footer -->
     <div class="footer bg-gray">
