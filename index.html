@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temitope Waheeb | Geospatial Scientist, Geoscience and GeoAI Expert</title>
+  <title>Temitope Waheeb | Geospatial Scientist, GeoAI and Geoscience</title>
   <meta name="description" content="Portfolio of Temitope Benedict Waheeb, geospatial scientist and geoscientist working on remote sensing, space-time pattern mining, explainable GeoAI and climate risk in Nigeria and Africa.">
   <meta name="author" content="Temitope Benedict Waheeb">
 
@@ -40,7 +40,7 @@
         <div class="info-content">
           <h1 class="name" title="Temitope Benedict Waheeb">Temitope Waheeb</h1>
 
-          <p class="title">Geospatial Scientist &middot; Geoscientist &middot; Esri Young Scholar</p>
+          <p class="title">Geospatial Scientist &middot; GeoAI &middot; Geoscientist</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -356,73 +356,467 @@
 
 
         <!-- skills -->
-
         <section class="skill">
 
-          <h3 class="h3 skills-title">Technical Skills</h3>
+          <div class="skills-head">
+            <h3 class="h3 skills-title">Technical Skills</h3>
+            <button class="skills-toggle-all" data-skills-toggle-all>Expand all</button>
+          </div>
 
-          <div class="skills-list content-card skills-grid">
+          <ul class="skill-legend">
+            <li><span class="dot lv-expert"></span>Expert</li>
+            <li><span class="dot lv-advanced"></span>Advanced</li>
+            <li><span class="dot lv-proficient"></span>Proficient</li>
+          </ul>
 
-            <div class="skill-group">
-              <h4 class="h5 skill-group-title">Programming</h4>
-              <ul class="tag-list">
-                <li class="tag">Python</li><li class="tag">JavaScript (GEE API)</li><li class="tag">R</li><li class="tag">SQL</li><li class="tag">HTML &amp; CSS</li>
-              </ul>
+          <div class="skills-accordion" data-skills>
+
+            <div class="skill-panel open" data-skill-panel>
+              <button class="skill-panel-head" aria-expanded="true" data-skill-head>
+                <span class="skill-panel-icon"><ion-icon name="planet-outline"></ion-icon></span>
+                <span class="skill-panel-text">
+                  <span class="skill-panel-title">Remote Sensing and Earth Observation</span>
+                  <span class="skill-panel-sub">7 skills &middot; Satellite and reanalysis data used in published and ongoing work.</span>
+                </span>
+                <span class="skill-panel-avg" title="Average proficiency">84%</span>
+                <ion-icon class="skill-panel-chev" name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="skill-panel-body">
+                <ul class="skill-rows">
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Sentinel-2 MSI and Landsat 5/8/9</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 92%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Sentinel-5P TROPOMI (air pollutants)</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 90%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">MODIS (LST, vegetation indices)</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 90%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">ERA5-Land and CHIRPS</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 82%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Sentinel-1 SAR flood mapping</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 78%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">NEX-GDDP-CMIP6 projections</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 78%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">VIIRS, WorldPop and GHS-POP</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 75%;"></div></div>
+                </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="skill-group">
-              <h4 class="h5 skill-group-title">Deep Learning and Machine Learning</h4>
-              <ul class="tag-list">
-                <li class="tag">PyTorch</li><li class="tag">SegFormer</li><li class="tag">Mask2Former</li><li class="tag">TabNet</li><li class="tag">XGBoost</li><li class="tag">CatBoost</li><li class="tag">LightGBM</li><li class="tag">Random Forest</li><li class="tag">SVM</li><li class="tag">LSTM</li><li class="tag">scikit-learn</li>
-              </ul>
+            <div class="skill-panel" data-skill-panel>
+              <button class="skill-panel-head" aria-expanded="false" data-skill-head>
+                <span class="skill-panel-icon"><ion-icon name="time-outline"></ion-icon></span>
+                <span class="skill-panel-text">
+                  <span class="skill-panel-title">Spatio-Temporal Analysis</span>
+                  <span class="skill-panel-sub">5 skills &middot; The methods behind the Esri Young Scholar Award project.</span>
+                </span>
+                <span class="skill-panel-avg" title="Average proficiency">89%</span>
+                <ion-icon class="skill-panel-chev" name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="skill-panel-body">
+                <ul class="skill-rows">
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Space-time cube and emerging hot spot analysis</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 95%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Getis-Ord Gi* and local outlier analysis</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 92%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Mann-Kendall and Sen's slope trend testing</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 90%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Time series clustering</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Forest-based and exponential smoothing forecasting</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="skill-group">
-              <h4 class="h5 skill-group-title">Explainable AI</h4>
-              <ul class="tag-list">
-                <li class="tag">SHAP</li><li class="tag">Accumulated Local Effects</li><li class="tag">Partial dependence</li><li class="tag">Permutation importance</li>
-              </ul>
+            <div class="skill-panel" data-skill-panel>
+              <button class="skill-panel-head" aria-expanded="false" data-skill-head>
+                <span class="skill-panel-icon"><ion-icon name="hardware-chip-outline"></ion-icon></span>
+                <span class="skill-panel-text">
+                  <span class="skill-panel-title">Machine Learning and Deep Learning</span>
+                  <span class="skill-panel-sub">6 skills &middot; Tabular models for hazard risk and transformers for imagery.</span>
+                </span>
+                <span class="skill-panel-avg" title="Average proficiency">80%</span>
+                <ion-icon class="skill-panel-chev" name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="skill-panel-body">
+                <ul class="skill-rows">
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">XGBoost, CatBoost and LightGBM</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 88%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">scikit-learn (Random Forest, SVM, tuning, CV)</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 88%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">PyTorch</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 80%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Transformer segmentation (SegFormer, Mask2Former)</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 80%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">TabNet and multi-layer perceptrons</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 75%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">LSTM for sequence data</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 70%;"></div></div>
+                </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="skill-group">
-              <h4 class="h5 skill-group-title">Geospatial Data Science</h4>
-              <ul class="tag-list">
-                <li class="tag">GeoPandas</li><li class="tag">rasterio</li><li class="tag">GDAL</li><li class="tag">ArcPy</li><li class="tag">geemap</li><li class="tag">earthengine-api</li><li class="tag">NumPy &amp; Pandas</li><li class="tag">GeoDa</li>
-              </ul>
+            <div class="skill-panel" data-skill-panel>
+              <button class="skill-panel-head" aria-expanded="false" data-skill-head>
+                <span class="skill-panel-icon"><ion-icon name="bulb-outline"></ion-icon></span>
+                <span class="skill-panel-text">
+                  <span class="skill-panel-title">Explainable AI</span>
+                  <span class="skill-panel-sub">3 skills &middot; Making model decisions readable for decision-makers.</span>
+                </span>
+                <span class="skill-panel-avg" title="Average proficiency">82%</span>
+                <ion-icon class="skill-panel-chev" name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="skill-panel-body">
+                <ul class="skill-rows">
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">SHAP</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Accumulated Local Effects and partial dependence</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 80%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Permutation importance</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 80%;"></div></div>
+                </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="skill-group">
-              <h4 class="h5 skill-group-title">Remote Sensing Data</h4>
-              <ul class="tag-list">
-                <li class="tag">Sentinel-1 SAR</li><li class="tag">Sentinel-2 MSI</li><li class="tag">Sentinel-5P TROPOMI</li><li class="tag">Landsat 5/8/9</li><li class="tag">MODIS</li><li class="tag">VIIRS</li><li class="tag">ERA5-Land</li><li class="tag">CHIRPS</li><li class="tag">NEX-GDDP-CMIP6</li><li class="tag">WorldPop</li>
-              </ul>
+            <div class="skill-panel" data-skill-panel>
+              <button class="skill-panel-head" aria-expanded="false" data-skill-head>
+                <span class="skill-panel-icon"><ion-icon name="code-slash-outline"></ion-icon></span>
+                <span class="skill-panel-text">
+                  <span class="skill-panel-title">Programming</span>
+                  <span class="skill-panel-sub">5 skills &middot; Day-to-day languages for analysis, automation and the web.</span>
+                </span>
+                <span class="skill-panel-avg" title="Average proficiency">76%</span>
+                <ion-icon class="skill-panel-chev" name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="skill-panel-body">
+                <ul class="skill-rows">
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 90%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">JavaScript (Google Earth Engine API)</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 78%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">R</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 70%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">SQL</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 70%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">HTML and CSS</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 72%;"></div></div>
+                </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="skill-group">
-              <h4 class="h5 skill-group-title">Spatio-Temporal Analysis</h4>
-              <ul class="tag-list">
-                <li class="tag">Space-time cube</li><li class="tag">Emerging hot spot analysis</li><li class="tag">Getis-Ord Gi*</li><li class="tag">Mann-Kendall &amp; Sen's slope</li><li class="tag">Time series clustering</li><li class="tag">Forest-based forecasting</li>
-              </ul>
+            <div class="skill-panel" data-skill-panel>
+              <button class="skill-panel-head" aria-expanded="false" data-skill-head>
+                <span class="skill-panel-icon"><ion-icon name="layers-outline"></ion-icon></span>
+                <span class="skill-panel-text">
+                  <span class="skill-panel-title">Geospatial Data Science Libraries</span>
+                  <span class="skill-panel-sub">6 skills &middot; The Python stack used across my GitHub projects.</span>
+                </span>
+                <span class="skill-panel-avg" title="Average proficiency">84%</span>
+                <ion-icon class="skill-panel-chev" name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="skill-panel-body">
+                <ul class="skill-rows">
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">NumPy and Pandas</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 90%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">GeoPandas</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 90%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">ArcPy</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">geemap and earthengine-api</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">rasterio and GDAL</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 80%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">GeoDa</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 75%;"></div></div>
+                </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="skill-group">
-              <h4 class="h5 skill-group-title">Geoscience</h4>
-              <ul class="tag-list">
-                <li class="tag">Thin-section petrography</li><li class="tag">X-ray diffraction</li><li class="tag">ICP-OES / ICP-MS</li><li class="tag">Well-log interpretation</li><li class="tag">Vertical electrical sounding</li><li class="tag">Reservoir characterisation</li>
-              </ul>
+            <div class="skill-panel" data-skill-panel>
+              <button class="skill-panel-head" aria-expanded="false" data-skill-head>
+                <span class="skill-panel-icon"><ion-icon name="map-outline"></ion-icon></span>
+                <span class="skill-panel-text">
+                  <span class="skill-panel-title">GIS Platforms and Web Apps</span>
+                  <span class="skill-panel-sub">7 skills &middot; Desktop, cloud and dashboard tools for delivery.</span>
+                </span>
+                <span class="skill-panel-avg" title="Average proficiency">86%</span>
+                <ion-icon class="skill-panel-chev" name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="skill-panel-body">
+                <ul class="skill-rows">
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">ArcGIS Pro</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 95%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Google Earth Engine</span>
+                    <span class="skill-level lv-expert">Expert</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-expert" style="--w: 90%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">ArcGIS Online, Dashboards and Experience Builder</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 88%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">QGIS</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Power BI</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Survey123 and KoboToolbox</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">ERDAS Imagine and Idrisi</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 75%;"></div></div>
+                </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="skill-group">
-              <h4 class="h5 skill-group-title">Platforms</h4>
-              <ul class="tag-list">
-                <li class="tag">ArcGIS Pro</li><li class="tag">QGIS</li><li class="tag">Google Earth Engine</li><li class="tag">ArcGIS Online</li><li class="tag">Experience Builder</li><li class="tag">ERDAS Imagine</li><li class="tag">Idrisi</li><li class="tag">Digital Earth Africa</li><li class="tag">Power BI</li><li class="tag">Survey123</li><li class="tag">KoboToolbox</li>
-              </ul>
+            <div class="skill-panel" data-skill-panel>
+              <button class="skill-panel-head" aria-expanded="false" data-skill-head>
+                <span class="skill-panel-icon"><ion-icon name="diamond-outline"></ion-icon></span>
+                <span class="skill-panel-text">
+                  <span class="skill-panel-title">Geoscience</span>
+                  <span class="skill-panel-sub">6 skills &middot; Field and laboratory skills from geology training and research.</span>
+                </span>
+                <span class="skill-panel-avg" title="Average proficiency">79%</span>
+                <ion-icon class="skill-panel-chev" name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="skill-panel-body">
+                <ul class="skill-rows">
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Thin-section petrography</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 85%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">X-ray diffraction interpretation</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 80%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Well-log and wireline interpretation</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 80%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Vertical electrical sounding and resistivity</span>
+                    <span class="skill-level lv-advanced">Advanced</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-advanced" style="--w: 80%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">ICP-OES and ICP-MS geochemistry</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 75%;"></div></div>
+                </li>
+                <li class="skill-row">
+                  <div class="skill-row-top">
+                    <span class="skill-name">Reservoir characterisation</span>
+                    <span class="skill-level lv-proficient">Proficient</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-bar-fill lv-proficient" style="--w: 72%;"></div></div>
+                </li>
+                </ul>
+              </div>
             </div>
 
           </div>
 
         </section>
-
 
         <!-- testimonials -->
 
@@ -606,10 +1000,11 @@
               <p class="timeline-org">Department of Geography, University of Ibadan</p>
               <span>Sept 2024 &ndash; Present</span>
               <ul class="timeline-bullets">
-                <li>Built space-time cubes in ArcGIS Pro for four Sentinel-5P pollutants and MODIS LST across all 37 Nigerian administrative units and 72 monthly steps, with Mann-Kendall, Sen's slope, emerging hot spot analysis and time series clustering.</li>
-                <li>Benchmarked curve fit, Holt-Winters and forest-based forecasting; the forest-based model achieved the lowest RMSE in 65 percent of states (mean 1.22 &deg;C), confirmed by Friedman and Nemenyi tests.</li>
-                <li>Adapted SegFormer-B2 and Mask2Former to four-channel Sentinel-2 input for marine pollution mapping on MADOS, reaching a mean IoU of 0.726 against a published 0.643.</li>
-                <li>Developed an explainable GeoAI flood susceptibility pipeline for the Upper Benue Basin with a Sentinel-1 SAR inventory, fifteen conditioning factors, XGBoost, CatBoost and TabNet, and a five-model CMIP6 ensemble under SSP2-4.5 and SSP5-8.5.</li>
+                <li>Created and managed space-time cubes in ArcGIS Pro across five variables (four Sentinel-5P TROPOMI pollutants and MODIS LST) for all 37 Nigerian administrative units and 72 monthly time steps, applying Mann-Kendall trend tests, Sen's slope, emerging hot spot analysis and time series clustering.</li>
+                <li>Processed and harmonised MODIS MOD11A1 and Sentinel-5P archives in Google Earth Engine and automated monthly zonal aggregation to state level in ArcPy, producing a continuous 2019 to 2024 series for every variable.</li>
+                <li>Benchmarked curve fit, Holt-Winters exponential smoothing and forest-based forecasting by RMSE; the forest-based model achieved the lowest error in 65 percent of states (mean 1.22 &deg;C), with Friedman and Nemenyi tests confirming the difference.</li>
+                <li>Designed a deep learning study benchmarking SegFormer-B2 and Mask2Former against the MariNeXt baseline on the MADOS marine pollution dataset, adapting both to four-channel Sentinel-2 input by weight inflation and reaching a mean IoU of 0.726 against a published 0.643.</li>
+                <li>Developed an explainable GeoAI flood susceptibility pipeline for the Upper Benue Basin, combining a Sentinel-1 SAR flood inventory with fifteen conditioning factors, benchmarking XGBoost, CatBoost and TabNet, and projecting exposure under SSP2-4.5 and SSP5-8.5 with a five-model NEX-GDDP-CMIP6 ensemble.</li>
               </ul>
             </li>
 
@@ -618,8 +1013,10 @@
               <p class="timeline-org">PiLAF Innovation Lab (Policy Leadership in Agriculture and Food Security), Ibadan</p>
               <span>Mar 2024 &ndash; Jan 2026</span>
               <ul class="timeline-bullets">
-                <li>Analysed climate change impacts on cereal yields across all 37 Nigerian states with CGIAR Adaptation Atlas data, in Python (Pandas, GeoPandas, Matplotlib, Seaborn).</li>
-                <li>Identified Plateau (-1.76 t/ha) and the FCT (-1.60 t/ha) as priority adaptation zones through yield gap and vulnerability assessment.</li>
+                <li>Conducted spatio-temporal analysis of climate change impacts on cereal crop yields across all 37 Nigerian states using CGIAR Adaptation Atlas data under SSP3-7.0 and SSP5-8.5.</li>
+                <li>Built Python workflows in Pandas, GeoPandas, Matplotlib and Seaborn for data cleaning, statistical modelling and spatial visualisation of projected yield scenarios.</li>
+                <li>Performed vulnerability and yield gap assessments, identifying Plateau (-1.76 t/ha) and the FCT (-1.60 t/ha) as priority adaptation zones.</li>
+                <li>Produced policy-ready boxplots, choropleth maps and summary tables on crop-specific risk and resilience, with interpretation and recommendations for decision-makers.</li>
               </ul>
             </li>
 
@@ -628,9 +1025,11 @@
               <p class="timeline-org">Bherney Spatial Consult, Ibadan</p>
               <span>Mar 2023 &ndash; Present</span>
               <ul class="timeline-bullets">
-                <li>Computed a Heat Risk Index for Ibadan from LST, ecological and demographic indicators to recommend strategic tree-planting sites.</li>
-                <li>Quantified land cover change from 1983 to 2023: vegetation fell from 48.8 to 25.2 percent and built-up area rose from 5.9 to 27 percent (LULC to LST R&sup2; 0.87 to 0.89).</li>
-                <li>Produced AHP flood risk maps for Anambra, groundwater potential zones from VES and GIS-MCDA, and Sentinel-2 NDVI vegetation response studies for Sokoto and Zamfara.</li>
+                <li>Computed a Heat Risk Index for Ibadan by integrating land surface temperature with ecological and demographic indicators, identifying central local government areas as heat hotspots and recommending strategic tree-planting sites.</li>
+                <li>Examined land use and land cover change from 1983 to 2023 against LST and spectral indices (NDVI, NDBI, MNDWI): vegetation fell from 48.8 to 25.2 percent, built-up area rose from 5.9 to 27 percent, and land cover explained LST with R&sup2; of 0.87 to 0.89.</li>
+                <li>Applied the Analytical Hierarchy Process with DEM, rainfall, drainage density, topographic wetness index and land use to map flood risk in Anambra State, placing southern Anambra near the River Niger in the very high-risk class.</li>
+                <li>Integrated vertical electrical soundings, remote sensing and GIS-based AHP to delineate groundwater potential zones, with only 0.42 percent of the study area classed as high potential.</li>
+                <li>Evaluated vegetation response to climate variability in Sokoto and Zamfara from NDVI time series (2002 to 2022), finding stronger rainfall correlation and greater climate vulnerability in Sokoto.</li>
               </ul>
             </li>
 
@@ -639,8 +1038,10 @@
               <p class="timeline-org">Department of Geology, University of Ibadan</p>
               <span>Mar 2023 &ndash; Present</span>
               <ul class="timeline-bullets">
-                <li>Characterised trona mineralogy at the Lake Chad perimeter through thin sections and X-ray diffraction.</li>
-                <li>Trained and compared SVM, Random Forest, XGBoost and LSTM models for petrophysical property prediction from well logs.</li>
+                <li>Characterised trona mineralogy at the Lake Chad perimeter by preparing thin sections, processing samples for X-ray diffraction and interpreting diffraction patterns for mineral composition and economic significance.</li>
+                <li>Trained and validated SVM, Random Forest, XGBoost and LSTM models on well-log data for petrophysical property prediction, comparing accuracy and interpretability across architectures.</li>
+                <li>Reviewed carbon capture utilisation strategies, challenges and upstream business prospects; the work was presented at a NAPE workshop and awarded Second Best Paper.</li>
+                <li>Delivered a departmental seminar on alluvial fan depositional environments, reviewing wireline logs and reservoir characteristics for petroleum exploration and reservoir modelling.</li>
               </ul>
             </li>
 
@@ -648,9 +1049,12 @@
               <h4 class="h4 timeline-item-title">Research Assistant, International Student Research Collaboration</h4>
               <p class="timeline-org">Universities of Bedfordshire, Stirling and Kingston London, UK</p>
               <span>Jan 2023 &ndash; Dec 2023</span>
-              <p class="timeline-text">
-                Contributed to postgraduate projects on Niger Delta oil spill records (Stirling), food waste in UK hospitality (Bedfordshire) and net-zero adoption among construction businesses (Kingston).
-              </p>
+              <ul class="timeline-bullets">
+                <li>Worked with postgraduate researchers across three UK universities on project design, data interpretation and dissertation-level reporting.</li>
+                <li>Oil spill research (Stirling): analysed regulatory spill records and stakeholder reports from the Niger Delta to identify significant temporal patterns, attribute responsibility and evaluate policy gaps.</li>
+                <li>Food waste management (Bedfordshire): carried out a systematic literature review of food waste causes and barriers in UK hospitality, assessed against the WRAP waste hierarchy.</li>
+                <li>Green economy transition (Kingston): designed and supported survey-based data collection on awareness of, and barriers to, net-zero adoption among construction businesses.</li>
+              </ul>
             </li>
 
           </ol>
@@ -671,65 +1075,80 @@
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Founder</h4>
-              <p class="timeline-org">GeoDev Lab Africa</p>
+              <p class="timeline-org">GeoDev Lab Africa (pan-African geospatial developer training initiative)</p>
               <span>Jun 2026 &ndash; Present</span>
-              <p class="timeline-text">
-                Free, project-based programme that trains GIS analysts to build geospatial systems rather than run one-off analyses. Designed a 52-week curriculum built around one continuous project per participant. Cohort One started on 1 September 2026 with 565 registered participants from 24 countries and no advertising spend.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Founded and lead a free, project-based programme that closes a gap in African geospatial education: institutions produce analysts who run an analysis once by hand, not developers who build systems that run repeatedly and serve other people.</li>
+                <li>Designed a 52-week curriculum in two phases, built around one continuous project that each participant extends month by month, from problem definition and data through applications, databases and services to GeoAI.</li>
+                <li>Grew Cohort One to 565 registered participants from 24 countries across five continents with no advertising spend; the cohort began on 1 September 2026.</li>
+                <li>Recruit developer mentors and industry speakers, produce weekly recorded tutorials, and measure learning outcomes through pre- and post-programme assessment.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Graduate Mentee</h4>
               <p class="timeline-org">Geomatics Nigeria Limited, Ibadan</p>
               <span>Apr 2026 &ndash; Present</span>
-              <p class="timeline-text">
-                WASH programme fieldwork: groundwater sampling with GPS positions in rural communities, then spatial interpolation of laboratory results to map contamination surfaces.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Contribute to the water, sanitation and hygiene (WASH) programme, running field campaigns in rural communities to collect groundwater samples and record GPS coordinates for every sampling point.</li>
+                <li>Join laboratory water quality results to their georeferenced collection points and apply spatial interpolation to map continuous contamination surfaces from point observations.</li>
+                <li>Support the firm's hydrogeological and environmental portfolio, including rural groundwater quality mapping, water supply planning and natural resource management.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">GIS and Data Management Intern</h4>
               <p class="timeline-org">Prime TEC Data and GIS Solutions, Ibadan</p>
               <span>Jun 2026 &ndash; Present</span>
-              <p class="timeline-text">
-                Extract, clean and structure OpenStreetMap infrastructure data in QGIS and ArcGIS Pro. Audited and documented 33 open geospatial data sources for Nigeria.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Extract, clean and structure OpenStreetMap infrastructure data in QGIS and ArcGIS Pro, producing validated layers with consistent attribute schemas and coordinate reference systems.</li>
+                <li>Audited and documented 33 open geospatial data sources for Nigeria, covering boundaries, settlements, roads, population, health, education and land cover.</li>
+                <li>Contribute to dashboard development, research proposals and branded client documents.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">GIS Analyst (Land Administration)</h4>
               <p class="timeline-org">Kwara State Geographic Information Service, Ilorin</p>
               <span>Oct 2025 &ndash; Dec 2025</span>
-              <p class="timeline-text">
-                Digitised cadastral parcels in QGIS and linked each to its land documents, standardised attribute schemas and coordinate systems, and ran quality checks on the parcel database.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Digitised cadastral parcels in QGIS and linked each to its supporting land documents, making title and ownership records retrievable directly from the map.</li>
+                <li>Standardised parcel attribute schemas and coordinate reference systems to support consistent land-record management.</li>
+                <li>Supported quality assurance on the parcel database, checking geometry and attribute integrity across digitised records.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Data Analyst</h4>
               <p class="timeline-org">TheKrediBankNG, Lagos</p>
               <span>Oct 2023 &ndash; Jun 2024</span>
-              <p class="timeline-text">
-                Descriptive and predictive analysis that contributed to a 15 percent gain in operational efficiency, with Power BI dashboards and infographics for stakeholders.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Conducted descriptive and predictive analysis that contributed to a 15 percent increase in operational efficiency.</li>
+                <li>Designed infographics and interactive dashboards that improved stakeholder engagement by 25 to 35 percent.</li>
+                <li>Applied Power BI, Excel and Python to streamline reporting systems and support organisational decision-making.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Data Processor and Analyst</h4>
               <p class="timeline-org">Analyst Data Services and Resources, Ibadan</p>
               <span>Aug 2023 &ndash; Jul 2024</span>
-              <p class="timeline-text">
-                Designed surveys with a 95 percent response rate and automated data workflows that cut processing time by 30 percent.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Designed and implemented survey methodologies that achieved a 95 percent response rate, protecting data validity and reliability.</li>
+                <li>Extracted and analysed complex datasets, delivering insights that improved client decision-making outcomes by around 20 percent.</li>
+                <li>Built automated data workflows that reduced processing time by 30 percent, and applied statistical and geospatial methods to turn raw data into usable information.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">GIS Analyst</h4>
               <p class="timeline-org">GISKonsult Academy, Ibadan</p>
               <span>Jan 2022 &ndash; Jun 2023</span>
-              <p class="timeline-text">
-                Delivered more than 20 map products from field surveys, GPS data and spatial analysis, including mapping of Adeyi Avenue and digitising features of Akungba in ArcGIS Pro.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Executed geospatial data collection and analysis projects, including mapping Adeyi Avenue and digitising rural and urban features of Akungba in ArcGIS Pro.</li>
+                <li>Produced and delivered more than 20 map products integrating field survey notes, GPS data and spatial analysis.</li>
+                <li>Collaborated on applied GIS solutions for community planning and development projects.</li>
+              </ul>
             </li>
 
           </ol>
@@ -752,33 +1171,43 @@
               <h4 class="h4 timeline-item-title">Co-Facilitator, Postgraduate GIS Courses (GIS 784 and GIF 702)</h4>
               <p class="timeline-org">Department of Geography, University of Ibadan</p>
               <span>2024 &ndash; Present</span>
-              <p class="timeline-text">
-                Teach remote sensing fundamentals, image preprocessing, classification and accuracy assessment, change detection, land change modelling and DEM-based hydrology in ArcGIS Pro, Idrisi Selva and Google Earth Engine.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Teach remote sensing fundamentals, image preprocessing, spectral indices, and supervised and unsupervised classification with accuracy assessment.</li>
+                <li>Cover change detection, Markov and land change modelling, and DEM-based hydrological analysis across ArcGIS Pro, Idrisi Selva and Google Earth Engine.</li>
+                <li>Ran hands-on sessions for 15 graduate students on digital elevation models, watershed delineation and stream extraction in ArcGIS Pro.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Volunteer Administrator</h4>
               <p class="timeline-org">University of Ibadan GIS Community</p>
               <span>2023 &ndash; Present</span>
-              <p class="timeline-text">
-                Trained over 500 undergraduates, 60 postgraduates and 20 academic staff across six departments in ArcGIS Pro.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Run the community's ArcGIS Pro training programme, reaching over 500 undergraduates, 60 postgraduates and 20 academic staff across six departments.</li>
+                <li>Taught 50 penultimate-year geography students statistical analysis with SPSS, Kobo Toolbox, ArcGIS spatial statistics and Excel.</li>
+                <li>Mentored final-year students on RStudio for spatial statistics in their research projects.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Workshop Facilitator</h4>
               <p class="timeline-org">SDSSN, Skills Academy, Data Science Nigeria</p>
               <span>2024 &ndash; 2026</span>
-              <p class="timeline-text">
-                Facilitated a Spatial and Data Science Society of Nigeria workshop on space-time pattern mining, delivered a Power BI programme to over 100 participants, and ran Google Earth Engine JavaScript workshops.
-              </p>
+              <ul class="timeline-bullets">
+                <li>Facilitated a Spatial and Data Science Society of Nigeria workshop on space-time pattern mining with the space-time cube in ArcGIS Pro, and produced the facilitator guide, participant workbook and delivery materials.</li>
+                <li>Delivered a Power BI programme with Skills Academy and Data Science Nigeria to over 100 participants.</li>
+                <li>Ran Google Earth Engine JavaScript API workshops for graduate colleagues.</li>
+              </ul>
             </li>
 
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Author, <i>Beyond Maps: Fundamentals of Geographic Information Systems</i></h4>
-              <p class="timeline-org">Sole-authored 24-chapter textbook</p>
+              <h4 class="h4 timeline-item-title">Author and Science Communicator</h4>
+              <p class="timeline-org"><i>Beyond Maps: Fundamentals of Geographic Information Systems</i></p>
               <span>In production</span>
+              <ul class="timeline-bullets">
+                <li>Sole author of a 24-chapter introductory textbook on geographic information science.</li>
+                <li>Publish GIS and GeoAI explainers on LinkedIn and X, translating remote sensing, spatial statistics and machine learning methods into plain language through illustrated carousels and long-form articles.</li>
+              </ul>
             </li>
 
           </ol>
