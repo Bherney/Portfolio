@@ -2703,3 +2703,7 @@ body.lightbox-open { overflow: hidden; }
   .pager-title { font-size: var(--fs-7); }
   .page-pager { gap: 8px; }
 }
+
+@media (min-width: 1250px) {
+  .info-content .title { white-space: normal; width: auto; max-width: 100%; text-align: center; line-height: 1.5; padding: 6px 14px; }
+}
