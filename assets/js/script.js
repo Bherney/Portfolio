@@ -299,3 +299,121 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   }, { passive: true });
 
 })();
+
+
+/* ------------------------------------------------------------
+ * Skills accordion
+ * ------------------------------------------------------------ */
+
+(function () {
+  const panels = document.querySelectorAll("[data-skill-panel]");
+  const toggleAll = document.querySelector("[data-skills-toggle-all]");
+  if (!panels.length) return;
+
+  const setOpen = function (panel, open) {
+    panel.classList.toggle("open", open);
+    panel.querySelector("[data-skill-head]").setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
+  const syncToggleLabel = function () {
+    if (!toggleAll) return;
+    const allOpen = Array.prototype.every.call(panels, function (p) { return p.classList.contains("open"); });
+    toggleAll.textContent = allOpen ? "Collapse all" : "Expand all";
+  };
+
+  panels.forEach(function (panel) {
+    panel.querySelector("[data-skill-head]").addEventListener("click", function () {
+      setOpen(panel, !panel.classList.contains("open"));
+      syncToggleLabel();
+    });
+  });
+
+  if (toggleAll) {
+    toggleAll.addEventListener("click", function () {
+      const openAll = toggleAll.textContent.indexOf("Expand") === 0;
+      panels.forEach(function (p) { setOpen(p, openAll); });
+      syncToggleLabel();
+    });
+  }
+
+  // first panel is open in the markup; replay its bars once it scrolls into view
+  if ("IntersectionObserver" in window) {
+    const first = panels[0];
+    if (first.classList.contains("open")) {
+      first.classList.remove("open");
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { setOpen(first, true); syncToggleLabel(); io.disconnect(); }
+        });
+      }, { threshold: 0.2 });
+      io.observe(first);
+    }
+  }
+})();
+
+
+/* ------------------------------------------------------------
+ * Previous / Next buttons at the end of every page + back to top
+ * ------------------------------------------------------------ */
+
+(function () {
+  const links = Array.prototype.slice.call(document.querySelectorAll("[data-nav-link]"));
+  const order = links.map(function (l) { return { key: l.dataset.navLink, name: l.textContent.trim() }; });
+
+  const scrollTop = function () { window.scrollTo({ top: 0, behavior: "smooth" }); };
+
+  const go = function (key) {
+    const link = links.filter(function (l) { return l.dataset.navLink === key; })[0];
+    if (link) link.click();
+  };
+
+  order.forEach(function (item, i) {
+    const page = document.querySelector('[data-page="' + item.key + '"]');
+    if (!page) return;
+
+    const pager = document.createElement("nav");
+    pager.className = "page-pager";
+    pager.setAttribute("aria-label", "Page navigation");
+
+    const prev = order[i - 1];
+    const next = order[i + 1];
+
+    if (prev) {
+      const b = document.createElement("button");
+      b.className = "pager-btn prev";
+      b.innerHTML = '<span class="pager-label">Previous</span><span class="pager-title"><ion-icon name="arrow-back-outline"></ion-icon>' + prev.name + "</span>";
+      b.addEventListener("click", function () { go(prev.key); });
+      pager.appendChild(b);
+    }
+
+    const top = document.createElement("button");
+    top.className = "pager-top";
+    top.setAttribute("aria-label", "Back to top");
+    top.title = "Back to top";
+    top.innerHTML = '<ion-icon name="arrow-up-outline"></ion-icon>';
+    top.addEventListener("click", scrollTop);
+    pager.appendChild(top);
+
+    if (next) {
+      const b = document.createElement("button");
+      b.className = "pager-btn next";
+      b.innerHTML = '<span class="pager-label">Next</span><span class="pager-title">' + next.name + '<ion-icon name="arrow-forward-outline"></ion-icon></span>';
+      b.addEventListener("click", function () { go(next.key); });
+      pager.appendChild(b);
+    }
+
+    page.appendChild(pager);
+  });
+
+  // floating back-to-top button, shown after scrolling down
+  const fab = document.createElement("button");
+  fab.className = "to-top";
+  fab.setAttribute("aria-label", "Back to top");
+  fab.innerHTML = '<ion-icon name="arrow-up-outline"></ion-icon>';
+  fab.addEventListener("click", scrollTop);
+  document.body.appendChild(fab);
+
+  const onScroll = function () { fab.classList.toggle("show", window.scrollY > 600); };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
