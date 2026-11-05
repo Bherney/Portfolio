@@ -188,13 +188,21 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   let lastFocus = null;
 
   // Build the list of slides from the projects currently visible in the filter
-  const buildSlides = function () {
+  const itemOf = function (link) { return link.closest(".project-item, [data-proof-item]"); };
+
+  // Build the slides from what is visible: portfolio projects, or the proof cards on the same page
+  const buildSlides = function (clicked) {
     slides = [];
-    document.querySelectorAll(".project-item.active [data-project]").forEach(function (link) {
-      const item = link.closest(".project-item");
+    const scope = clicked.hasAttribute("data-proof") ? clicked.closest("[data-proof-scope]") : null;
+    const links = scope
+      ? scope.querySelectorAll("[data-proof-item]:not([hidden]) [data-proof]")
+      : document.querySelectorAll(".project-item.active [data-project]");
+    links.forEach(function (link) {
+      const item = itemOf(link);
       const srcs = (link.dataset.images || link.getAttribute("href")).split("|");
+      const caps = link.dataset.captions ? link.dataset.captions.split("|") : [];
       srcs.forEach(function (src, i) {
-        slides.push({ src: src, item: item, figIndex: i, figTotal: srcs.length });
+        slides.push({ src: src, item: item, figIndex: i, figTotal: srcs.length, caption: caps[i] || "" });
       });
     });
   };
@@ -203,8 +211,8 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     const s = slides[current];
     if (!s) return;
 
-    const title = s.item.querySelector(".project-title").textContent;
-    const category = s.item.querySelector(".project-category").innerHTML;
+    const title = (s.item.querySelector("[data-lb-title]") || s.item.querySelector(".project-title")).textContent;
+    const category = (s.item.querySelector("[data-lb-cat]") || s.item.querySelector(".project-category")).innerHTML;
     const details = s.item.querySelector(".project-details");
 
     box.classList.add("is-loading");
@@ -215,9 +223,10 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     titleEl.textContent = title;
     catEl.innerHTML = category;
+    const part = s.caption ? s.caption : "Figure " + (s.figIndex + 1);
     counterEl.textContent = s.figTotal > 1
-      ? "Figure " + (s.figIndex + 1) + " of " + s.figTotal + "  ·  " + (current + 1) + " / " + slides.length
-      : (current + 1) + " / " + slides.length;
+      ? part + " (" + (s.figIndex + 1) + " of " + s.figTotal + ")  ·  " + (current + 1) + " / " + slides.length
+      : (s.caption && s.caption !== title ? s.caption + "  ·  " : "") + (current + 1) + " / " + slides.length;
 
     descEl.innerHTML = details ? details.querySelector(".project-desc").innerHTML : "";
 
@@ -246,8 +255,8 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   };
 
   const open = function (link) {
-    buildSlides();
-    const item = link.closest(".project-item");
+    buildSlides(link);
+    const item = itemOf(link);
     current = Math.max(0, slides.findIndex(function (s) { return s.item === item; }));
     lastFocus = document.activeElement;
     box.hidden = false;
@@ -270,7 +279,15 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     render();
   };
 
-  document.querySelectorAll("[data-project]").forEach(function (link) {
+  // "View proof" buttons open the card's own media
+  document.querySelectorAll("[data-proof-open]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const media = btn.closest("[data-proof-item]").querySelector("[data-proof]");
+      if (media) open(media);
+    });
+  });
+
+  document.querySelectorAll("[data-project], [data-proof]").forEach(function (link) {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       open(this);
@@ -416,4 +433,40 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   const onScroll = function () { fab.classList.toggle("show", window.scrollY > 600); };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+})();
+
+
+/* ------------------------------------------------------------
+ * Proof pages: category filters and "go to page" links
+ * ------------------------------------------------------------ */
+
+(function () {
+  document.querySelectorAll("[data-proof-scope]").forEach(function (scope) {
+    const btns = scope.querySelectorAll("[data-pf]");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const key = btn.dataset.pf;
+        btns.forEach(function (b) { b.classList.toggle("active", b === btn); });
+        scope.querySelectorAll("[data-proof-item]").forEach(function (item) {
+          item.hidden = !(key === "all" || item.dataset.cat === key);
+        });
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-goto]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      const link = document.querySelector('[data-nav-link="' + el.dataset.goto + '"]');
+      if (link) link.click();
+    });
+  });
+
+  // keep the active tab visible in the scrolling mobile navbar
+  document.querySelectorAll("[data-nav-link]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (link.scrollIntoView) link.scrollIntoView({ block: "nearest", inline: "center" });
+    });
+  });
+  const active = document.querySelector(".navbar-link.active");
+  if (active && active.scrollIntoView && window.innerWidth < 1024) active.scrollIntoView({ block: "nearest", inline: "center" });
 })();
