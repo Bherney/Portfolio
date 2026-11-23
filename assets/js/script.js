@@ -484,3 +484,16 @@ document.querySelectorAll(".more-toggle").forEach(function (btn) {
     btn.querySelector("span").textContent = open ? "More details" : "Fewer details";
   });
 });
+
+
+/* light / dark theme toggle */
+(function () {
+  const btn = document.querySelector(".theme-toggle");
+  if (!btn) return;
+  btn.addEventListener("click", function () {
+    const root = document.documentElement;
+    const light = root.getAttribute("data-theme") === "light";
+    if (light) root.removeAttribute("data-theme"); else root.setAttribute("data-theme", "light");
+    try { localStorage.setItem("theme", light ? "dark" : "light"); } catch (e) {}
+  });
+})();
