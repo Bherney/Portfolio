@@ -470,3 +470,17 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   const active = document.querySelector(".navbar-link.active");
   if (active && active.scrollIntoView && window.innerWidth < 1024) active.scrollIntoView({ block: "nearest", inline: "center" });
 })();
+
+
+/* collapsible cards: awards, certificates, activities */
+document.querySelectorAll(".more-toggle").forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const panel = document.getElementById(btn.getAttribute("aria-controls"));
+    const open = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", open ? "false" : "true");
+    panel.hidden = open;
+    btn.querySelector("span").textContent = open ? "More details" : "Fewer details";
+  });
+});

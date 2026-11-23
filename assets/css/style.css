@@ -3014,3 +3014,12 @@ body.lightbox-open { overflow: hidden; }
   .award-grid { grid-template-columns: repeat(3, 1fr); }
   .navbar-list { gap: 20px; }
 }
+
+/* collapsible award cards */
+.card-more { margin-top: 2px; }
+.card-more[hidden] { display: none; }
+.card-more .tag-list { margin-top: 10px; }
+.more-toggle { gap: 6px; }
+.more-toggle ion-icon { transition: transform 0.25s ease; }
+.more-toggle[aria-expanded="true"] ion-icon { transform: rotate(180deg); }
+.award-grid, .cert-grid { align-items: start; }
